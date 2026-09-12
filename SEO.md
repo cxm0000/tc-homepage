@@ -14,13 +14,10 @@ Run `python3 scripts/check-seo.py` from the project root after editing content o
 
 ## Publication
 
-The production site was still serving the older homepage during this update. These local changes are not yet live.
+GitHub Pages publishes through `.github/workflows/deploy-pages.yml` on pushes to `main` and manual workflow dispatch. The Pages custom domain is `tangcai.se`.
 
-Deploy `index.html`, `styles.css`, `logo.png`, `assets/`, `robots.txt`, `sitemap.xml`, and `llms.txt`. Do not publish workspace files, scripts, or this document. Serve XML as `application/xml` and TXT as `text/plain; charset=utf-8`. Invalidate affected CloudFront paths after updating the S3 origin.
+The build checks source SEO, packages only public files into `_site`, and validates the output before deployment. Canonical URLs use the configured Pages domain and always use HTTPS. GitHub manages the TLS certificate.
 
-After deployment:
-- Verify the canonical hostname uses HTTPS; redirect alternate hosts and `/index.html` to `https://tangcai.se/` at the host/CDN if applicable.
-- Check that the homepage, linked assets, robots, and sitemap return 200 with no `X-Robots-Tag: noindex`. Missing URLs should return a real 404.
-- Validate published structured data with Schema.org Validator. SoftwareApplication markup here is descriptive, not a claim of eligibility for Google's software rich results (no fabricated ratings or offers).
-- Verify domain ownership in Google Search Console and Bing Webmaster Tools, submit the sitemap, and inspect the homepage. Reuse an existing verified property.
-- Check mobile Core Web Vitals using production traffic or PageSpeed Insights. Local rendering alone does not verify production performance, indexing, rankings, or AI citations.
+Website DNS: apex A/AAAA use GitHub Pages addresses; www is a CNAME to `cxm0000.github.io`. Existing mail records and other services are preserved. The previous CloudFront/S3 resources are retained for rollback; this deployment does not delete them.
+
+After domain or content changes, check HTTPS, metadata, assets, robots, and sitemap on the live domain. Run `python3 scripts/check-seo.py` locally. Validate structured data with Schema.org Validator, submit `https://tangcai.se/sitemap.xml` to existing verified Search Console/Bing properties, and measure production Core Web Vitals. Publication does not guarantee indexing or AI citations.
