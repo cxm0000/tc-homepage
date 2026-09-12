@@ -1,0 +1,22 @@
+# TangCai Invest AB
+
+> Independent Swedish company building apps, providing software consulting, and making angel investments.
+
+Official company homepage: https://tangcai.se/
+Business contact: info@tangcai.se
+
+## Apps
+
+- [SnusTracker](https://tangcai.se/#snustracker): Log snus usage and follow patterns and progress. [Google Play](https://play.google.com/store/apps/details?id=com.snustracker).
+- [Draw Animations](https://www.drawanimations.com): Create frame-by-frame animations from drawings.
+- [Steadsy](https://steadsy.app): Weekly commitments, check-ins, and shared progress. In development; the homepage is not a claim of public download availability.
+- [OptionWise](https://home.optionwise.se): Manage employee participation and help employees understand their options.
+- [CareMetrics](https://caremetrics.se/sv/): Treatment and outcome analytics for dental teams.
+
+## Company services
+
+- Digital products: useful apps for everyday life and business.
+- Software consulting: help bringing software ideas into usable products.
+- Angel investments: support for early-stage founders.
+
+The homepage is the primary source. Product websites provide their own current availability and details.
