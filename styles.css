@@ -756,12 +756,6 @@ footer {
   }
 }
 
-/* A full-width final product keeps the five-app showcase balanced. */
-.caremetrics-card {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
 .caremetrics-art {
   background: linear-gradient(135deg, #ffffff, #e6f3f1);
   color: #0f172a;
@@ -787,4 +781,35 @@ footer {
   transform: rotate(6deg);
   background: #ffffff;
   object-fit: contain;
+}
+
+.strength-art {
+  background: #e8eaf0;
+  color: #343f60;
+}
+#strength-progress-tracker .card-title {
+  align-items: flex-start;
+}
+#strength-progress-tracker h3 {
+  max-width: 240px;
+}
+
+.store-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  border-top: 1px solid var(--line);
+  padding-top: 10px;
+}
+.store-badges a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 60px;
+}
+.store-badges img {
+  object-fit: contain;
+}
+.store-badges .google-play-badge {
+  margin-left: -4px;
 }

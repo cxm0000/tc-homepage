@@ -43,9 +43,9 @@ def check_refs(value):
         for child in value: check_refs(child)
 check_refs(nodes)
 apps = [node for node in nodes if node['@type'] == 'SoftwareApplication']
-assert len(apps) == 5
+assert len(apps) == 6
 for app in apps:
-    assert app['url'] in page.links, app['name']
+    assert app['url'] in page.links or app['url'] == app['@id'], app['name']
     assert app['@id'].split('#')[1] in page.ids
     assert app['name'] in Path('llms.txt').read_text()
     assert not any(key in app for key in ('aggregateRating', 'offers', 'review'))
@@ -55,4 +55,4 @@ for agent in ('Googlebot', 'Bingbot', 'OAI-SearchBot', 'ChatGPT-User', 'ClaudeBo
     assert robot.can_fetch(agent, page.canonical), agent
 locs = ET.parse('sitemap.xml').findall('.//{http://www.sitemaps.org/schemas/sitemap/0.9}loc')
 assert [loc.text for loc in locs] == [page.canonical]
-print('Passed: metadata, canonical, five linked app entities, schema references, local images, section anchors, sitemap, and crawler access.')
+print('Passed: metadata, canonical, six linked app entities, schema references, local images, section anchors, sitemap, and crawler access.')

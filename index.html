@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="TangCai Invest AB builds thoughtful digital products and supports ambitious businesses. Explore SnusTracker, Draw Animations, Steadsy, OptionWise, and CareMetrics."
+      content="TangCai Invest AB builds thoughtful digital products and supports ambitious businesses. Explore SnusTracker, Draw Animations, Steadsy, OptionWise, CareMetrics, and Strength Progress Tracker."
     />
     <link rel="canonical" href="https://tangcai.se/" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
@@ -89,13 +89,18 @@
             "@type": "SoftwareApplication",
             "@id": "https://tangcai.se/#snustracker",
             "name": "SnusTracker",
-            "url": "https://play.google.com/store/apps/details?id=com.snustracker",
+            "url": "https://apps.apple.com/app/id6752117399",
             "description": "Understand your snus habits. Log your usage, explore your patterns, and follow your progress over time.",
             "applicationCategory": "LifestyleApplication",
             "image": "https://tangcai.se/assets/snustracker.png",
             "publisher": {
               "@id": "https://tangcai.se/#organization"
-            }
+            },
+            "installUrl": [
+              "https://apps.apple.com/app/id6752117399",
+              "https://play.google.com/store/apps/details?id=com.snustracker"
+            ],
+            "operatingSystem": "iOS, Android"
           },
           {
             "@type": "SoftwareApplication",
@@ -149,7 +154,7 @@
             "@type": "ItemList",
             "@id": "https://tangcai.se/#apps",
             "name": "Apps by TangCai Invest AB",
-            "numberOfItems": 5,
+            "numberOfItems": 6,
             "itemListElement": [
               {
                 "@type": "ListItem",
@@ -185,8 +190,32 @@
                 "item": {
                   "@id": "https://tangcai.se/#caremetrics"
                 }
+              },
+              {
+                "@type": "ListItem",
+                "position": 6,
+                "item": {
+                  "@id": "https://tangcai.se/#strength-progress-tracker"
+                }
               }
             ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://tangcai.se/#strength-progress-tracker",
+            "name": "Strength Progress Tracker",
+            "url": "https://apps.apple.com/app/id6747354472",
+            "description": "Track your strength training with custom workouts, sets, and reps. Follow your progress, training volume, and personal records over time.",
+            "applicationCategory": "HealthApplication",
+            "image": "https://tangcai.se/assets/strength-progress-tracker.png",
+            "publisher": {
+              "@id": "https://tangcai.se/#organization"
+            },
+            "installUrl": [
+              "https://apps.apple.com/app/id6747354472",
+              "https://play.google.com/store/apps/details?id=com.tangcai.gymprogresstracker"
+            ],
+            "operatingSystem": "iOS, Android"
           }
         ]
       }
@@ -304,13 +333,33 @@
                 Understand your snus habits. Log your usage, explore your
                 patterns, and follow your progress over time.
               </p>
-              <a
-                class="text-link"
-                href="https://play.google.com/store/apps/details?id=com.snustracker"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Explore on Google Play <span aria-hidden="true">↗</span></a
-              >
+              <div class="store-badges" aria-label="Download SnusTracker">
+                <a
+                  href="https://apps.apple.com/app/id6752117399"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Download SnusTracker on the App Store"
+                  ><img
+                    src="assets/app-store-badge.svg"
+                    alt="Download on the App Store"
+                    width="120"
+                    height="40"
+                    loading="lazy"
+                /></a>
+                <a
+                  class="google-play-badge"
+                  href="https://play.google.com/store/apps/details?id=com.snustracker"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Get SnusTracker on Google Play"
+                  ><img
+                    src="assets/google-play-badge.png"
+                    alt="Get it on Google Play"
+                    width="155"
+                    height="60"
+                    loading="lazy"
+                /></a>
+              </div>
             </div>
           </article>
           <article class="app-card" id="draw-animations">
@@ -442,6 +491,59 @@
               >
             </div>
           </article>
+          <article class="app-card" id="strength-progress-tracker">
+            <div class="product-art strength-art">
+              <span class="art-category">EVERY REP. EVERY STEP FORWARD.</span>
+              <img
+                src="assets/strength-progress-tracker.png"
+                alt="Strength Progress Tracker app icon"
+                width="110"
+                height="110"
+              />
+              <span class="art-caption">See your strength take shape.</span>
+            </div>
+            <div class="card-content">
+              <div class="card-title">
+                <h3>Strength Progress Tracker</h3>
+                <span class="tag">Fitness</span>
+              </div>
+              <p>
+                Track your strength training with custom workouts, sets, and
+                reps. Follow your progress, training volume, and personal
+                records over time.
+              </p>
+              <div
+                class="store-badges"
+                aria-label="Download Strength Progress Tracker"
+              >
+                <a
+                  href="https://apps.apple.com/app/id6747354472"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Download Strength Progress Tracker on the App Store"
+                  ><img
+                    src="assets/app-store-badge.svg"
+                    alt="Download on the App Store"
+                    width="120"
+                    height="40"
+                    loading="lazy"
+                /></a>
+                <a
+                  class="google-play-badge"
+                  href="https://play.google.com/store/apps/details?id=com.tangcai.gymprogresstracker"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Get Strength Progress Tracker on Google Play"
+                  ><img
+                    src="assets/google-play-badge.png"
+                    alt="Get it on Google Play"
+                    width="155"
+                    height="60"
+                    loading="lazy"
+                /></a>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
       <section class="about-section" id="about">
@@ -504,7 +606,11 @@
             A product question, a project, or an idea worth exploring.<br />We’d
             love to hear from you.
           </p>
-          <a class="button" href="mailto:info@tangcai.se"
+          <a
+            class="button"
+            href="mailto:info@tangcai.se?subject=Enquiry%20to%20TangCai%20Invest%20AB"
+            aria-label="Email TangCai Invest AB at info@tangcai.se"
+            title="Open your email app"
             >info@tangcai.se <span aria-hidden="true">↗</span></a
           >
         </div>

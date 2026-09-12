@@ -2,7 +2,7 @@
 
 Canonical production homepage: https://tangcai.se/
 
-The homepage is static HTML: company details, app descriptions, and links work without JavaScript. Inline JSON-LD connects the Organization, WebSite, WebPage, app list, and five SoftwareApplication entities. App metadata describes visible content; no prices, ratings, or release availability are invented. Personal details are excluded.
+The homepage is static HTML: company details, app descriptions, and links work without JavaScript. Inline JSON-LD connects the Organization, WebSite, WebPage, app list, and six SoftwareApplication entities. App metadata describes visible content; no prices, ratings, or release availability are invented. Personal details are excluded.
 
 `robots.txt` allows public crawlers and advertises `sitemap.xml`. This also allows training crawlers under the existing unrestricted policy; no bot-specific restrictions are introduced. Robots rules are advisory and do not override CDN/firewall rules.
 
@@ -10,7 +10,7 @@ The homepage is static HTML: company details, app descriptions, and links work w
 
 ## Verification
 
-Run `python3 scripts/check-seo.py` from the project root after editing content or URLs. It checks metadata, JSON-LD references, all five product links, image paths, section anchors, sitemap URLs, and robots access.
+Run `python3 scripts/check-seo.py` from the project root after editing content or URLs. It checks metadata, JSON-LD references, all six product links, image paths, section anchors, sitemap URLs, and robots access.
 
 ## Publication
 

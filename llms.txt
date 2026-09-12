@@ -7,11 +7,13 @@ Business contact: info@tangcai.se
 
 ## Apps
 
-- [SnusTracker](https://tangcai.se/#snustracker): Log snus usage and follow patterns and progress. [Google Play](https://play.google.com/store/apps/details?id=com.snustracker).
+- [SnusTracker](https://tangcai.se/#snustracker): Log snus usage and follow patterns and progress. [App Store](https://apps.apple.com/app/id6752117399) and [Google Play](https://play.google.com/store/apps/details?id=com.snustracker).
 - [Draw Animations](https://www.drawanimations.com): Create frame-by-frame animations from drawings.
 - [Steadsy](https://steadsy.app): Weekly commitments, check-ins, and shared progress. In development; the homepage is not a claim of public download availability.
 - [OptionWise](https://home.optionwise.se): Manage employee participation and help employees understand their options.
 - [CareMetrics](https://caremetrics.se/sv/): Treatment and outcome analytics for dental teams.
+
+- [Strength Progress Tracker](https://tangcai.se/#strength-progress-tracker): Strength workout logging, sets and reps, training volume, progress, and personal records. [App Store](https://apps.apple.com/app/id6747354472) and [Google Play](https://play.google.com/store/apps/details?id=com.tangcai.gymprogresstracker).
 
 ## Company services
 
