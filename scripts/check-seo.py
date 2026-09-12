@@ -1,4 +1,5 @@
 """Run from the project root: python3 scripts/check-seo.py."""
+import argparse
 import json
 from html.parser import HTMLParser
 from pathlib import Path
@@ -24,11 +25,15 @@ class Page(HTMLParser):
     def handle_endtag(self, tag):
         if tag == 'script': self.in_schema = False
 
+parser = argparse.ArgumentParser()
+parser.add_argument('--site-url', default='https://tangcai.se/')
+site_url = parser.parse_args().site_url.rstrip('/') + '/'
+
 page = Page()
 page.feed(Path('index.html').read_text())
 assert page.headings == 1
 assert len(page.ids) == len(set(page.ids))
-assert page.canonical == page.metas['og:url'] == 'https://tangcai.se/'
+assert page.canonical == page.metas['og:url'] == site_url
 assert 'noindex' not in page.metas['robots']
 for path in page.images: assert Path(path).is_file(), path
 for link in page.links:
