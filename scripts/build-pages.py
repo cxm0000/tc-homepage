@@ -7,7 +7,7 @@ from urllib.parse import urlparse
 parser = argparse.ArgumentParser()
 parser.add_argument('--site-url', required=True)
 args = parser.parse_args()
-site_url = args.site_url.rstrip('/') + '/'
+site_url = args.site_url.replace('http://', 'https://', 1).rstrip('/') + '/'
 parsed = urlparse(site_url)
 assert parsed.scheme == 'https' and parsed.netloc and not parsed.query and not parsed.fragment
 output = Path('_site')

@@ -27,7 +27,7 @@ class Page(HTMLParser):
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--site-url', default='https://tangcai.se/')
-site_url = parser.parse_args().site_url.rstrip('/') + '/'
+site_url = parser.parse_args().site_url.replace('http://', 'https://', 1).rstrip('/') + '/'
 
 page = Page()
 page.feed(Path('index.html').read_text())
