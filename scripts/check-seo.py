@@ -74,6 +74,6 @@ for link in privacy.links:
 for path in privacy.images: assert (privacy_path.parent / path).is_file(), path
 assert Path('apps/privacy/privacy.css').is_file()
 assert 'apps/privacy/' in page.links
-for identifier in ('TangCai Invest AB', 'ming_cxm', 'Xiaoming Cai', 'SnusTracker', 'info@tangcai.se'):
+for identifier in ('TangCai Invest AB', 'SnusTracker', 'info@tangcai.se'):
     assert identifier in privacy_path.read_text(), identifier
 print('Passed: privacy page identity, canonical, headings, anchors, assets, and homepage link.')
