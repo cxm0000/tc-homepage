@@ -59,5 +59,21 @@ robot.parse(Path('robots.txt').read_text().splitlines())
 for agent in ('Googlebot', 'Bingbot', 'OAI-SearchBot', 'ChatGPT-User', 'ClaudeBot', 'PerplexityBot'):
     assert robot.can_fetch(agent, page.canonical), agent
 locs = ET.parse('sitemap.xml').findall('.//{http://www.sitemaps.org/schemas/sitemap/0.9}loc')
-assert [loc.text for loc in locs] == [page.canonical]
+assert [loc.text for loc in locs] == [page.canonical, site_url + 'apps/privacy/']
 print('Passed: metadata, canonical, six linked app entities, schema references, local images, section anchors, sitemap, and crawler access.')
+
+privacy_path = Path('apps/privacy/index.html')
+privacy = Page()
+privacy.feed(privacy_path.read_text())
+assert privacy.headings == 1
+assert len(privacy.ids) == len(set(privacy.ids))
+assert privacy.canonical == site_url + 'apps/privacy/'
+assert 'noindex' not in privacy.metas['robots']
+for link in privacy.links:
+    if link.startswith('#'): assert link[1:] in privacy.ids, link
+for path in privacy.images: assert (privacy_path.parent / path).is_file(), path
+assert Path('apps/privacy/privacy.css').is_file()
+assert 'apps/privacy/' in page.links
+for identifier in ('TangCai Invest AB', 'ming_cxm', 'Xiaoming Cai', 'SnusTracker', 'info@tangcai.se'):
+    assert identifier in privacy_path.read_text(), identifier
+print('Passed: privacy page identity, canonical, headings, anchors, assets, and homepage link.')
