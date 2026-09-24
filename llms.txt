@@ -16,6 +16,16 @@ Apps privacy policy: https://tangcai.se/apps/privacy/
 
 - [Strength Progress Tracker](https://tangcai.se/#strength-progress-tracker): Strength workout logging, sets and reps, training volume, progress, and personal records. [App Store](https://apps.apple.com/app/id6747354472) and [Google Play](https://play.google.com/store/apps/details?id=com.tangcai.gymprogresstracker).
 
+## Forward deployed engineering and AI consulting with Xiaoming
+
+- [Work with Xiaoming](https://tangcai.se/work-with-me/): A forward deployed engineering approach for business and product teams, starting with a practical AI workflow pilot. Examine one recurring task, test a focused improvement, and evaluate it against an agreed baseline. Scope, fee, and timing are agreed before work starts. Contact info@tangcai.se.
+- [Workflow pilot questions](https://tangcai.se/work-with-me/#questions): Scope, example tasks, pricing approach, evaluation, and who delivers the work.
+- Provider: TangCai Invest AB. Working contact: Xiaoming. Intended audience: business and product teams.
+- Deliverables: a pilot summary, usage instructions, known limits, and a recommendation to continue, adjust, or stop. No guaranteed savings or published fixed price.
+
+- [Career profile](https://www.linkedin.com/in/ming83/): Xiaoming’s professional background includes solutions architecture, software engineering and management, healthcare digitisation, SaaS, and API management.
+- [Forward deployed approach](https://tangcai.se/work-with-me/#fde): Understand the business and systems, diagnose the problem, design and test a solution, and scope adoption and rollout where warranted.
+
 ## Company services
 
 - Digital products: useful apps for everyday life and business.

@@ -19,8 +19,9 @@ for filename in ('index.html', 'styles.css', 'logo.png', 'robots.txt', 'sitemap.
     else:
         shutil.copy2(source, output / filename)
 shutil.copytree('assets', output / 'assets', dirs_exist_ok=True)
-shutil.copytree('apps', output / 'apps', dirs_exist_ok=True)
-for page in (output / 'apps').rglob('*.html'):
-    page.write_text(page.read_text().replace('https://tangcai.se/', site_url))
+for directory in ('apps', 'work-with-me'):
+    shutil.copytree(directory, output / directory, dirs_exist_ok=True)
+    for page in (output / directory).rglob('*.html'):
+        page.write_text(page.read_text().replace('https://tangcai.se/', site_url))
 (output / '.nojekyll').touch()
 print(f'Packaged public homepage for {site_url}')

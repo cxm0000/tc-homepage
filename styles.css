@@ -639,7 +639,11 @@ footer {
     width: calc(100% - 40px);
   }
   .site-header {
-    height: 90px;
+    height: auto;
+    min-height: 90px;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding-block: 20px;
   }
   .brand {
     font-size: 22px;
